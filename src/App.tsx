@@ -5,26 +5,22 @@ function App() {
   const showAside = useBreakpointValue({ base: false, lg: true });
 
   return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-    >
-      <GridItem area="nav">
-        <Navbar />
-      </GridItem>
-
-      {showAside && (
-        <GridItem area="aside" bg="gold">
-          Aside
+    <>
+      <Grid
+        templateAreas={{
+          base: `"nav" "main"`,
+          lg: `"nav nav" "aside main"`,
+        }}
+      >
+        <GridItem area="nav">
+          <Navbar />
         </GridItem>
-      )}
 
-      <GridItem area="main" bg="dodgerblue">
-        Main
-      </GridItem>
-    </Grid>
+        {showAside && <GridItem area="aside">Aside</GridItem>}
+
+        <GridItem area="main">Main</GridItem>
+      </Grid>
+    </>
   );
 }
 
