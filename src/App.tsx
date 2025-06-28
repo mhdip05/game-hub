@@ -4,7 +4,6 @@ import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 
 function App() {
-  const showAside = useBreakpointValue({ base: false, lg: true });
 
   return (
     <>
