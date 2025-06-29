@@ -30,7 +30,7 @@ const GameGrid = ({ selectedGenre }: Props) => {
             </GameCardContainer>
           ))}
         {data.map((game) => (
-          <GameCardContainer key={game.id}>
+          <GameCardContainer key={game.id} >
             <GameCard key={game.id} game={game}></GameCard>
           </GameCardContainer>
         ))}
